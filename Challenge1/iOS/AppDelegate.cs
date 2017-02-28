@@ -13,8 +13,7 @@ namespace AzureMobileApp.iOS
     {
         // Define a authenticated user.
         private MobileServiceUser user;
-        MobileServiceClient client = new MobileServiceClient("https://mobile-85aa742d-c17a-4451-938f-d02d8f8c9eb1.azurewebsites.net");
-
+       
         public MobileServiceAuthenticationProvider ServiceProvider { get; private set; }
 
         public async Task<bool> Authenticate(int Provider)
@@ -52,7 +51,7 @@ namespace AzureMobileApp.iOS
                 // Sign in with Facebook login using a server-managed flow.
                 if (user == null)
                 {
-                    user = await client.LoginAsync(UIApplication.SharedApplication.KeyWindow.RootViewController,
+                    user = await MobileClient.GetInstance().MobileServiceClient.LoginAsync(UIApplication.SharedApplication.KeyWindow.RootViewController,
                        ServiceProvider);
                     if (user != null)
                     {

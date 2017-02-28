@@ -12,8 +12,6 @@ namespace AzureMobileApp
 
     public partial class AzureMobileAppPage : ContentPage
     {
-        public static string ApplicationURL = @"https://mobile-85aa742d-c17a-4451-938f-d02d8f8c9eb1.azurewebsites.net";
-        MobileServiceClient client;
         IMobileServiceTable<myTable> myList;
         string serviceProvider = "";
 
@@ -69,9 +67,8 @@ namespace AzureMobileApp
             }
 
             if (result)
-            {
-                this.client = new MobileServiceClient(ApplicationURL);
-                this.myList = client.GetTable<myTable>();
+            { 
+                this.myList = MobileClient.GetInstance().MobileServiceClient.GetTable<myTable>();
 
                 //Get the items from the myTable from your Azure Mobile apps table at Azure
                 DisplayList.ItemsSource = await myList.Where(myList => myList.Name == serviceProvider).ToEnumerableAsync();
