@@ -114,6 +114,8 @@
     <BundleResource Include="Resources\Icon-Small%402x.png" />
     <BundleResource Include="Resources\Icon-Small%403x.png" />
     <InterfaceDefinition Include="Resources\LaunchScreen.storyboard" />
+    <BundleResource Include="Images\RedBug.png" />
+    <BundleResource Include="Images\Xamarin120.png" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -139,9 +141,12 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Challenge3\Challenge3.csproj">
-      <Project>{8c5fc25b-64a3-48a2-b8f1-9b49a86d35cc}</Project>
+      <Project>{80115C60-2CE1-447B-8C77-828963B7C49A}</Project>
       <Name>Challenge3</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Images\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <Import Project="..\packages\Xamarin.Forms.2.3.3.193\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.targets" Condition="Exists('..\packages\Xamarin.Forms.2.3.3.193\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.targets')" />

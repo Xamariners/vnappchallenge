@@ -27,8 +27,8 @@ namespace Challenge3
 
         static Tile()
         {
-            flagImageSource = ImageSource.FromFile("BugSweeper/Images/Xamarin120.png");
-            bugImageSource = ImageSource.FromFile("BugSweeper/Images/RedBug.png");
+            flagImageSource = ImageSource.FromFile("Images/Xamarin120.png");
+            bugImageSource = ImageSource.FromFile("Images/RedBug.png");
         }
 
         public Tile(int row, int col)

@@ -72,8 +72,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
-    <None Include="Images\RedBug.png" />
-    <None Include="Images\Xamarin120.png" />
     <None Include="Screenshots\01Android.png" />
     <None Include="Screenshots\01iOS.png" />
     <None Include="Screenshots\01wp.png" />
@@ -83,6 +81,10 @@
   <ItemGroup>
     <Folder Include="Images\" />
     <Folder Include="Screenshots\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Images\RedBug.png" />
+    <Content Include="Images\Xamarin120.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <Import Project="..\packages\Xamarin.Forms.2.3.3.193\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.targets" Condition="Exists('..\packages\Xamarin.Forms.2.3.3.193\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.targets')" />

@@ -28,3 +28,5 @@
 /Users/mjtpena/Projects/vnappchallenge/Challenge3/Challenge3.iOS/bin/iPhoneSimulator/Debug/Xamarin.Forms.Xaml.dll
 /Users/mjtpena/Projects/vnappchallenge/Challenge3/Challenge3.iOS/bin/iPhoneSimulator/Debug/Challenge3.dll
 /Users/mjtpena/Projects/vnappchallenge/Challenge3/Challenge3.iOS/bin/iPhoneSimulator/Debug/Challenge3.dll.mdb
+/Users/mjtpena/Projects/vnappchallenge/Challenge3/Challenge3.iOS/obj/iPhoneSimulator/Debug/optimized/Images/RedBug.png
+/Users/mjtpena/Projects/vnappchallenge/Challenge3/Challenge3.iOS/obj/iPhoneSimulator/Debug/optimized/Images/Xamarin120.png
