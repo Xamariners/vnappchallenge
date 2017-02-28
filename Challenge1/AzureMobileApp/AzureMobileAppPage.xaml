@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:local="clr-namespace:AzureMobileApp" x:Class="AzureMobileApp.AzureMobileAppPage">
+    <ContentPage.Content>
+    <Grid>
+      <Grid.RowDefinitions>
+
+      <RowDefinition Height="Auto"/>
+        <RowDefinition Height="Auto" />
+        <RowDefinition Height="Auto" />
+        <RowDefinition Height="Auto" />
+         <RowDefinition Height="Auto" />
+        <RowDefinition Height="*" />
+      </Grid.RowDefinitions>
+
+      <Button Text="Google" x:Name="Google"
+               Clicked="OnAdd" BackgroundColor="#df4a32" Grid.Row="0"/>
+
+      <Button Text="Twitter"
+
+              Clicked="OnAdd"  BackgroundColor="#1da1f2" Grid.Row="1"  />
+      <Button Text="Microsoft"
+
+              Clicked="OnAdd"  BackgroundColor="#a030cb"  Grid.Row="2"/>
+      <Button Text="Facebook"
+              MinimumHeightRequest="30" MinimumWidthRequest ="30"
+              Clicked="OnAdd"  BackgroundColor="#3b5998" Grid.Row="3" />
+
+
+      <Label Text="Login to see your Role Model! " HorizontalOptions="Center" Grid.Row="4"></Label>
+      <ListView x:Name="DisplayList" Grid.Row="5" HasUnevenRows="true" >
+        <ListView.ItemTemplate>
+          <DataTemplate>
+            <ViewCell Height="300">
+
+              <Image Source="{Binding URL}" Aspect="Fill"/>
+
+            </ViewCell>
+          </DataTemplate>
+        </ListView.ItemTemplate>
+      </ListView>
+
+    </Grid>
+  </ContentPage.Content>
+</ContentPage>
