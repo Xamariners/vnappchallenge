@@ -13,7 +13,7 @@ namespace Challenge3
         {
             InitializeComponent();
 
-            MainPage = new Challenge3.MainPage();
+			MainPage = new Challenge3.BugSweeper();
         }
 
         protected override void OnStart()
