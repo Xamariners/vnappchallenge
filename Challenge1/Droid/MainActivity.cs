@@ -16,8 +16,7 @@ namespace AzureMobileApp.Droid
     public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsAppCompatActivity, IAuthenticate
     {
         private MobileServiceUser user;
-        MobileServiceClient client = new MobileServiceClient("https://mobile-85aa742d-c17a-4451-938f-d02d8f8c9eb1.azurewebsites.net");
-
+       
         public MobileServiceAuthenticationProvider ServiceProvider { get; private set; }
 
         public async Task<bool> Authenticate(int Provider)
@@ -55,7 +54,7 @@ namespace AzureMobileApp.Droid
             try
             {
                 // Sign in with Facebook login using a server-managed flow.
-                user = await client.LoginAsync(this,
+                user = await MobileClient.GetInstance().MobileServiceClient.LoginAsync(this,
                     ServiceProvider);
                 if (user != null)
                 {
