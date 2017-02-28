@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Challenge3.Android", "Challenge3\Challenge3.Android\Challenge3.Android.csproj", "{11D6DD1A-F88F-4959-99EA-296CC957C473}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Challenge3.Android", "Challenge3.Android\Challenge3.Android.csproj", "{11D6DD1A-F88F-4959-99EA-296CC957C473}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Challenge3", "Challenge3\Challenge3\Challenge3.csproj", "{80115C60-2CE1-447B-8C77-828963B7C49A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Challenge3", "Challenge3\Challenge3.csproj", "{80115C60-2CE1-447B-8C77-828963B7C49A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Challenge3.iOS", "Challenge3\Challenge3.iOS\Challenge3.iOS.csproj", "{1FE56EA5-80EC-4481-97B8-1B5217F75C0B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Challenge3.iOS", "Challenge3.iOS\Challenge3.iOS.csproj", "{1FE56EA5-80EC-4481-97B8-1B5217F75C0B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
