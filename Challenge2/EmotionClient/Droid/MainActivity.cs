@@ -1,27 +1,107 @@
 ﻿using Android.App;
 using Android.Widget;
 using Android.OS;
+using Android.Content;
+using System.Collections.Generic;
+using Android.Content.PM;
+using Android.Provider;
+using System;
+using Android.Graphics;
 
 namespace EmotionClient.Droid
 {
     [Activity(Label = "EmotionClient", MainLauncher = true, Icon = "@mipmap/icon")]
     public class MainActivity : Activity
     {
-        int count = 1;
+        public static Java.IO.File _file;
+        public static Java.IO.File _dir;
+        public static Bitmap _bitmap;
+        private ImageView _imageView;
+        private Button _pictureButton;
+        private TextView _resultTextView;
+        private bool _isCaptureMode = true;
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
-
-            // Set our view from the "main" layout resource
             SetContentView(Resource.Layout.Main);
+            if (IsThereAnAppToTakePictures())
+            {
+                CreateDirectoryForPictures();
+                _pictureButton = FindViewById<Button>(Resource.Id.GetPictureButton);
+                _pictureButton.Click += OnActionClick;
+                _imageView = FindViewById<ImageView>(Resource.Id.imageView1);
+                _resultTextView = FindViewById<TextView>(Resource.Id.resultText);
+            }
+        }
 
-            // Get our button from the layout resource,
-            // and attach an event to it
-            Button button = FindViewById<Button>(Resource.Id.myButton);
+        private void CreateDirectoryForPictures()
+        {
+            _dir = new Java.IO.File(Android.OS.Environment.GetExternalStoragePublicDirectory(Android.OS.Environment.DirectoryPictures), "CameraAppDemo");
+            if (!_dir.Exists())
+            {
+                _dir.Mkdirs();
+            }
+        }
 
-            button.Click += delegate { button.Text = string.Format("{0} clicks!", count++); };
+        private bool IsThereAnAppToTakePictures()
+        {
+            Intent intent = new Intent(MediaStore.ActionImageCapture);
+            IList<ResolveInfo> availableActivities =
+                PackageManager.QueryIntentActivities(intent, PackageInfoFlags.MatchDefaultOnly);
+            return availableActivities != null && availableActivities.Count > 0;
+        }
+
+        private void OnActionClick(object sender, EventArgs eventArgs)
+        {
+            if (_isCaptureMode == true)
+            {
+                Intent intent = new Intent(MediaStore.ActionImageCapture);
+                _file = new Java.IO.File(_dir, String.Format("myPhoto_{0}.jpg", Guid.NewGuid()));
+                intent.PutExtra(MediaStore.ExtraOutput, Android.Net.Uri.FromFile(_file));
+                StartActivityForResult(intent, 0);
+            }
+            else
+            {
+                _imageView.SetImageBitmap(null);
+                if (_bitmap != null)
+                {
+                    _bitmap.Recycle();
+                    _bitmap.Dispose();
+                    _bitmap = null;
+                }
+                _pictureButton.Text = "Take Picture";
+                _resultTextView.Text = "";
+                _isCaptureMode = true;
+            }
+        }
+
+        protected override async void OnActivityResult(int requestCode, Result resultCode, Intent data)
+        {
+            base.OnActivityResult(requestCode, resultCode, data);
+            try
+            {
+                _bitmap = BitmapHelpers.GetAndRotateBitmap(_file.Path);
+                _bitmap = Bitmap.CreateScaledBitmap(_bitmap, 2000, (int)(2000 * _bitmap.Height / _bitmap.Width), false);
+                _imageView.SetImageBitmap(_bitmap);
+                _resultTextView.Text = "Loading...";
+                using (System.IO.MemoryStream stream = new System.IO.MemoryStream())
+                {
+                    _bitmap.Compress(Bitmap.CompressFormat.Jpeg, 90, stream);
+                    stream.Seek(0, System.IO.SeekOrigin.Begin);
+                    float result = await Core.GetAverageHappinessScore(stream);
+                    _resultTextView.Text = Core.GetHappinessMessage(result);
+                }
+            }
+            catch (Exception ex)
+            {
+                _resultTextView.Text = ex.Message;
+            }
+            finally
+            {
+                _pictureButton.Text = "Reset";
+                _isCaptureMode = false;
+            }
         }
     }
 }
-
