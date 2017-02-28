@@ -11,7 +11,7 @@ namespace AzureMobileApp
     public class MobileClient
     {
 
-        public static string ApplicationURL = @"http://vnlala.azurewebsites.net";
+        public static string ApplicationURL = @"https://vnlala.azurewebsites.net";
         MobileServiceClient _client;
 
         private static MobileClient _mobileClient;
