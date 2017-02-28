@@ -12,7 +12,7 @@ namespace AzureMobileApp
 
     public partial class AzureMobileAppPage : ContentPage
     {
-        public static string ApplicationURL = @"http://mobile-85aa742d-c17a-4451-938f-d02d8f8c9eb1.azurewebsites.net";
+        public static string ApplicationURL = @"https://mobile-85aa742d-c17a-4451-938f-d02d8f8c9eb1.azurewebsites.net";
         MobileServiceClient client;
         IMobileServiceTable<myTable> myList;
         string serviceProvider = "";
@@ -67,8 +67,6 @@ namespace AzureMobileApp
                     break;
                 }
             }
-
-
 
             if (result)
             {
