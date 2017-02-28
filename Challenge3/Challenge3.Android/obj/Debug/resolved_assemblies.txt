@@ -12,6 +12,8 @@
 /Users/mjtpena/Projects/vnappchallenge/Challenge3/Challenge3.Android/obj/Debug/android/assets/Xamarin.Forms.Platform.dll
 /Users/mjtpena/Projects/vnappchallenge/Challenge3/Challenge3.Android/obj/Debug/android/assets/Xamarin.Forms.Platform.Android.dll
 /Users/mjtpena/Projects/vnappchallenge/Challenge3/Challenge3.Android/obj/Debug/android/assets/Xamarin.Forms.Xaml.dll
+/Users/mjtpena/Projects/vnappchallenge/Challenge3/Challenge3.Android/obj/Debug/android/assets/HockeySDK.AndroidBindings.dll
+/Users/mjtpena/Projects/vnappchallenge/Challenge3/Challenge3.Android/obj/Debug/android/assets/HockeySDK.dll
 /Users/mjtpena/Projects/vnappchallenge/Challenge3/Challenge3.Android/obj/Debug/android/assets/Mono.Android.dll
 /Users/mjtpena/Projects/vnappchallenge/Challenge3/Challenge3.Android/obj/Debug/android/assets/mscorlib.dll
 /Users/mjtpena/Projects/vnappchallenge/Challenge3/Challenge3.Android/obj/Debug/android/assets/System.dll

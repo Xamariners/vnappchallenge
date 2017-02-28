@@ -112,6 +112,8 @@ class MonoPackageManager_Resources {
 		"Xamarin.Forms.Platform.dll",
 		"Xamarin.Forms.Platform.Android.dll",
 		"Xamarin.Forms.Xaml.dll",
+		"HockeySDK.AndroidBindings.dll",
+		"HockeySDK.dll",
 		"Challenge3.dll",
 	};
 	public static final String[] Dependencies = new String[]{

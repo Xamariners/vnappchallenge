@@ -4,14 +4,20 @@
   <ResolvedResourceDirectories>
     <ResolvedResourceDirectory>/Users/mjtpena/Projects/vnappchallenge/Challenge3/Challenge3.Android/obj/Debug/__library_projects__/Xamarin.Forms.Platform/library_project_imports/res</ResolvedResourceDirectory>
     <ResolvedResourceDirectory>/Users/mjtpena/Projects/vnappchallenge/Challenge3/Challenge3.Android/obj/Debug/__library_projects__/Xamarin.Forms.Platform.Android/library_project_imports/res</ResolvedResourceDirectory>
+    <ResolvedResourceDirectory>/Users/mjtpena/Projects/vnappchallenge/Challenge3/Challenge3.Android/obj/Debug/__library_projects__/HockeySDK.AndroidBindings/library_project_imports/res</ResolvedResourceDirectory>
+    <ResolvedResourceDirectory>/Users/mjtpena/Projects/vnappchallenge/Challenge3/Challenge3.Android/obj/Debug/__library_projects__/HockeySDK/library_project_imports/res</ResolvedResourceDirectory>
   </ResolvedResourceDirectories>
   <ResolvedAssetDirectories>
     <ResolvedAssetDirectory>obj/Debug/__library_projects__/Xamarin.Forms.Platform/library_project_imports/assets</ResolvedAssetDirectory>
     <ResolvedAssetDirectory>obj/Debug/__library_projects__/Xamarin.Forms.Platform.Android/library_project_imports/assets</ResolvedAssetDirectory>
+    <ResolvedAssetDirectory>obj/Debug/__library_projects__/HockeySDK.AndroidBindings/library_project_imports/assets</ResolvedAssetDirectory>
+    <ResolvedAssetDirectory>obj/Debug/__library_projects__/HockeySDK/library_project_imports/assets</ResolvedAssetDirectory>
   </ResolvedAssetDirectories>
   <ResolvedEnvironmentFiles />
   <ResolvedResourceDirectoryStamps>
     <ResolvedResourceDirectoryStamp>/Users/mjtpena/Projects/vnappchallenge/Challenge3/Challenge3.Android/obj/Debug/__library_projects__/Xamarin.Forms.Platform.stamp</ResolvedResourceDirectoryStamp>
     <ResolvedResourceDirectoryStamp>/Users/mjtpena/Projects/vnappchallenge/Challenge3/Challenge3.Android/obj/Debug/__library_projects__/Xamarin.Forms.Platform.Android.stamp</ResolvedResourceDirectoryStamp>
+    <ResolvedResourceDirectoryStamp>/Users/mjtpena/Projects/vnappchallenge/Challenge3/Challenge3.Android/obj/Debug/__library_projects__/HockeySDK.AndroidBindings.stamp</ResolvedResourceDirectoryStamp>
+    <ResolvedResourceDirectoryStamp>/Users/mjtpena/Projects/vnappchallenge/Challenge3/Challenge3.Android/obj/Debug/__library_projects__/HockeySDK.stamp</ResolvedResourceDirectoryStamp>
   </ResolvedResourceDirectoryStamps>
 </Paths>
